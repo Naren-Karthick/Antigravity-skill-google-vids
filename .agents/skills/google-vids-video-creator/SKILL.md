@@ -12,7 +12,7 @@ description: >-
 
 ## Mission
 
-Turn a topic, title, brief, or supplied script into a complete, polished, exported video. Google Vids is the primary editor. Use external tools only for a specific capability gap, a failed operation, or a measurable quality improvement.
+Turn a topic, title, brief, or supplied script into a complete, polished, exported video. Google Vids is the primary editor while its available generation features can complete the job. If its AI video-generation quota is exhausted, switch to the free local motion-graphics, local-TTS, and FFmpeg pipeline in `references/free-local-production-fallback.md`; do not switch to Google Flow or paid cloud generators.
 
 **Never equate a planned action with a completed action.** Verify each important state change in the UI or with a file/media inspection. Never claim an export exists or plays unless verified.
 
@@ -98,7 +98,7 @@ Use the research brief to create:
 
 Adapt the script to the target runtime. Prefer clear, natural, speakable language over dense paragraphs. For educational/code videos, verify that explanations and code are correct and runnable where applicable.
 
-Do not stop after delivering research or a script: continue into storyboard, asset generation, Google Vids editing, QA, and export unless the user explicitly asks for planning or a script only.
+Do not stop after delivering research or a script: continue into storyboard, asset generation, Google Vids editing or the free local motion-graphics pipeline when quota is exhausted, QA, and export unless the user explicitly asks for planning or a script only.
 
 ## Phase 2 — Storyboard and timing
 
@@ -123,15 +123,15 @@ Create a project folder where supported, otherwise use a dedicated working direc
 - `production-plan.md`
 - `scene-breakdown.csv` or `scene-breakdown.md`
 - `manifest.json`
-- generated voiceover, images, clips, music, SFX, captions, and export files
+- generated voiceover, images, motion-graphics source, rendered scenes/clips, music, SFX, captions, FFmpeg logs, and export files
 - `qa-report.md`
 
 Manifest requirements:
 - Project title, created/updated timestamps, target specs
-- Google Vids project URL/name if available
+- Google Vids project URL/name if available; selected video engine (Google Vids / Remotion / Motion Canvas / Manim / HTML-Canvas / Blender)
 - Current phase and last verified checkpoint
 - Scene IDs with statuses: planned, narration_ready, visual_ready, inserted, reviewed
-- Asset filenames/locations, durations, aspect ratios, and generation notes
+- Asset filenames/locations, durations, aspect ratios, source/license, selected renderer, TTS engine/voice/license, and generation notes
 - Retry count and last error
 - Export path, file size, duration, codec/metadata, and playback-check status
 
@@ -157,30 +157,18 @@ Before resuming, read the manifest and inspect the actual Google Vids project. R
 UI labels and feature availability can change. Follow the current visible UI; use the reference guide as a hint, not an authority over the live interface.
 
 
-## Phase 4A — Check Google Vids generation quota and choose the video-generation engine
+## Phase 4A — Check Google Vids quota and select the production path
 
-**Before generating any AI video clips, inspect the user's live Google Vids account and current UI for quota/limit status.** Do not assume a fixed monthly or daily allowance: limits, counters, eligible features, and reset rules vary by account type, subscription, Workspace policy, and product rollout.
+Before generating AI video clips, inspect the live Google Vids UI/account for a remaining-use counter, quota warning, disabled generation control, plan notice, or limit error. Do not assume a fixed allowance or infer remaining quota from this project's clip count. Record the visible evidence, remaining amount/reset details if shown, and status (available, exhausted, unavailable, or unknown) in the manifest.
 
-1. Open the AI video generation panel and inspect any remaining-use counter, quota message, disabled control, plan notice, or usage-limit dialog. If the account exposes a usage/availability page, inspect it too.
-2. Record what is actually visible in the production manifest: quota status (available, exhausted, unavailable, or unknown), any displayed remaining amount, reset date/time if shown, and the evidence observed.
-3. Do not infer remaining quota from the number of clips created in this project. Usage may be shared across projects or other Google products, and the account may not expose a precise counter.
-4. If Google Vids has usable quota, generate one pilot clip and verify it succeeds before continuing in small batches.
-5. If Google Vids explicitly reports that its AI video-generation limit is exhausted, generation is blocked by quota, or the feature is unavailable for this account, switch the video-clip generation work to Google Flow. Do not repeatedly retry the exhausted Vids generator.
-6. If the Vids quota cannot be determined from the UI, try one low-cost pilot only when the UI allows it. If the attempt returns a limit/quota error, switch to Flow. If there is no reliable way to check and no error is shown, mark the status unknown and proceed cautiously rather than claiming the quota is available.
+1. If Google Vids generation is available, create and verify one pilot clip, then continue in small batches.
+2. If Vids explicitly reports quota exhaustion, generation blocked by quota, or feature unavailability, stop retrying that generator and switch to the **free local production fallback** described in `references/free-local-production-fallback.md`.
+3. If quota is unknown, try at most one low-cost pilot only when the UI permits it. If it returns a quota error, use the local fallback. If no error appears, mark quota unknown and proceed cautiously.
+4. The local fallback uses Remotion first (subject to its current free-license eligibility), then Motion Canvas, Manim, HTML/CSS/SVG/Canvas, or Blender when appropriate. It creates animated scenes/motion graphics rather than depending on AI-video credits.
+5. Generate narration with a suitable free local TTS engine (prefer Kokoro where supported; use Piper only after checking the exact voice's MODEL_CARD/license, then a built-in offline OS voice if suitable). Use FFmpeg for final assembly, audio mixing, captions, muxing, and validation.
+6. Do not use Google Flow, paid APIs, paid stock, paid TTS, or any purchase as an automatic fallback. Stop and ask before any paid action. If no free local path can meet the brief, explain the limitation and ask whether the user wants a simpler motion-graphics version or to provide assets/voiceover.
 
-### Google Flow fallback
-
-- Open Google Flow in the same authenticated browser profile at https://labs.google/fx/tools/flow (or use the official Flow entry point shown in Google products). Confirm the correct Google account.
-- Before generating, inspect the Flow profile area for remaining Flow/AI credits and inspect the current model/settings panel for the cost of the selected generation. Flow credits and model costs can change; never hard-code a credit allowance or assume Flow is unlimited.
-- If Flow has enough available credits and the generation is permitted, generate the required scene clips there. Prefer the model/settings that best meet the storyboard and remaining-credit budget; create a pilot first, then proceed in small batches.
-- If Flow also has insufficient credits, is rate-limited, unavailable in the user's region/account, or requires a paid upgrade/purchase, stop before spending money. Ask the user before any purchase, subscription change, or other paid action. Otherwise use non-generative Vids assets (images, diagrams, stock media, motion graphics) where they can meet the brief, or report the blocker.
-- Verify each Flow generation completed and download/export the resulting clip. Keep scene IDs and filenames aligned with the storyboard and manifest.
-- Import the downloaded Flow clips into the original Google Vids project. Google Vids remains the primary editor: arrange clips, add narration, captions, music, SFX, transitions, and titles there, then perform the normal QA and MP4 export.
-- Check the output for any visible watermark, especially when the account or location may apply one. Do not attempt to remove or conceal required provenance marks; report them if present.
-- Record which scenes were generated in Vids versus Flow, the selected model/settings, any displayed credit usage, import status, and any watermark or limitation in the manifest and final report.
-
-**Important:** A Google Vids quota exhaustion is a trigger to use Flow for video-clip generation, not permission to bypass account restrictions. Respect Flow's own credits, rate limits, eligibility, regional availability, and safety controls.
-
+Google Vids can remain an optional finishing editor only if the user can still use the needed features without quota or cost. Otherwise render and finish the complete MP4 locally. Record the chosen engine, TTS voice/model and license, asset sources/licenses, FFmpeg details, quota evidence, and QA status in the manifest.
 
 ## Visual style and character library
 
