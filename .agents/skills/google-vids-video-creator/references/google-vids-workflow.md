@@ -24,20 +24,18 @@ Google Vids is the primary editor. Treat this document as an operational guide, 
 5. Keep a manifest mapping each asset to its scene.
 
 
-## Quota preflight and Google Flow fallback
+## Quota preflight and local fallback
 
-Before creating AI video clips, inspect the live Google Vids UI/account for a quota counter, remaining-use indicator, disabled generation control, plan eligibility notice, or quota error. Limits vary by account and can change, so do not rely on a fixed number from this reference. Record only what the account actually displays. Do not estimate remaining quota from the current project's clip count.
+Before creating AI video clips, inspect the live Google Vids UI/account for a quota counter, remaining-use indicator, disabled generation control, plan eligibility notice, or quota error. Record only what the account actually displays. Do not estimate remaining quota from the current project's clip count.
 
-If Vids quota is exhausted or the generator returns a limit error, switch clip generation to Google Flow rather than retrying Vids repeatedly:
+- If Vids quota is available, create and verify a pilot clip, then continue in small batches.
+- If Vids quota is exhausted or the generator returns a limit error, stop retrying it and switch to the free local production pipeline in `free-local-production-fallback.md`.
+- The local fallback uses Remotion first (only when the user's current license eligibility permits it), then Motion Canvas, Manim, HTML/CSS/SVG/Canvas, or Blender as appropriate.
+- Generate narration with a suitable free local TTS engine, checking the exact model/voice license. Use FFmpeg for final rendering/concatenation, audio mixing, captions, muxing, and validation.
+- Do not use Google Flow or paid cloud generation/TTS/stock services as an automatic fallback. Ask before any paid action.
+- If the local environment cannot support the selected renderer or TTS voice, report the exact blocker and offer a simpler local animation or user-provided assets/voiceover.
 
-1. Open the official Google Flow experience in the same authenticated browser profile: https://labs.google/fx/tools/flow.
-2. Check the profile menu for remaining Flow/AI credits. Check the prompt/settings panel for the selected model's current credit cost. Both balances and costs are subject to change.
-3. Generate a pilot clip, then create the remaining clips in small batches only while credits, account eligibility, and rate limits permit.
-4. Download the completed Flow clips and import them into the existing Google Vids project. Finish editing and export in Google Vids.
-5. If Flow has insufficient credits or requires a paid plan/upgrade, stop and ask before any purchase. If Flow is unavailable, report the blocker and use suitable non-generative visuals in Vids only if they meet the brief.
-6. Check whether the exported Flow clips carry a visible watermark and report it. Do not remove required provenance marks.
-
-Google Flow is a fallback generator, not an unlimited quota bypass. Respect both products' account limits, regional availability, safety rules, and paid-action boundaries.
+Google Vids may still be used for optional finishing only if the required features remain available without extra quota or cost. Otherwise complete the MP4 locally. See the full fallback reference for setup, tool selection, licensing, audio workflow, and QA.
 
 ## Edit and preview
 - Arrange scenes in storyboard order.
