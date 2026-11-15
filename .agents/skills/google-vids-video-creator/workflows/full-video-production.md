@@ -5,11 +5,20 @@ Use this workflow for a complete video from topic to exported MP4.
 ## 1. Brief
 Read the request and attachments. Define audience, language, platform, runtime, aspect ratio, tone, narration, visual style, and export target. Default only when safe; ask one concise question for a consequential ambiguity.
 
-## 2. Research
-For factual topics, research current and reliable sources. Prioritize primary sources. Cross-check key claims and save source URLs/date. Separate fact from hypothesis, especially in speculative "what if" stories.
+## 2. Title-led research (required when only a title is supplied)
+Treat the title as enough to start. Do not ask the user to supply a script or research notes. Infer sensible defaults for audience, language, platform, runtime, narration, and visual style from the title and known preferences; record the assumptions in the production plan and proceed.
+
+- Break the title into the central question, concepts, audience, and promised outcome.
+- Research the topic before scripting. Prefer primary sources such as official documentation, original research, government/university publications, standards bodies, and direct datasets; use reputable secondary sources for context.
+- Cross-check important factual claims against at least two independent credible sources where practical. Check dates for current or changing topics.
+- Save a research brief containing key findings, verified facts, examples, caveats, uncertainties, source titles/organizations, URLs, and research date.
+- Distinguish established facts from interpretation, prediction, and hypothetical storytelling. In "what if" videos, explain the real-world baseline and label imagined outcomes as speculation.
+- Verify names, dates, figures, units, definitions, quotations, and code examples. Omit or qualify unsupported claims; never fabricate evidence or citations.
 
 ## 3. Script
-Write the complete narration, hook, narrative arc, CTA, and scene breakdown. Keep sentences speakable. Check factual claims and pronunciation. Avoid bloated narration that cannot fit the requested runtime.
+Turn the research brief into a complete, runtime-appropriate script: hook, narrative arc, clear explanations, transitions, narration, scene-by-scene visual intent, concise on-screen text, music/SFX cues, conclusion, and CTA where appropriate. Include source notes for the description or references slide when useful. Keep sentences speakable and check factual claims and pronunciation. For educational/code topics, verify the code and explanations.
+
+**Continue automatically:** unless the user explicitly requests only research, an outline, or a script, continue from the title through storyboard, asset creation, Google Vids editing, quality checks, and export. Do not stop after presenting the research or script.
 
 ## 4. Storyboard
 For every scene define: ID, purpose, narration, measured/estimated duration, visual prompt, character references, on-screen text, SFX/music cue, transition, and continuity notes. Use measured narration audio to set scene length.
