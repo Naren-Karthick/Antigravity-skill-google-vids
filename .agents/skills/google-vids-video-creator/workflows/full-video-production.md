@@ -26,7 +26,19 @@ For every scene define: ID, purpose, narration, measured/estimated duration, vis
 ## 5. Prepare and pilot
 Create a manifest and asset folders. Open Google Vids, create/name project, set aspect ratio. Establish visual style and reference assets. Generate one pilot scene and verify style, timing, audio, and insertion before batch work.
 
-## 6. Produce
+
+## 6. Check Vids quota and choose the generator
+Before any AI video-clip generation, inspect the live Google Vids UI/account for a remaining-use counter, quota warning, disabled generation control, or limit error. Record the observed status and any displayed reset details in the manifest. Do not hard-code a monthly/daily allowance or estimate remaining quota from this project's clip count.
+
+- If Vids quota is available, create and verify one pilot clip, then continue in small batches.
+- If Vids explicitly reports the quota is exhausted or generation is blocked by the limit, stop retrying Vids and switch clip generation to Google Flow.
+- If the counter is not exposed, try one pilot only if the UI permits it. A quota error triggers the Flow fallback; otherwise mark quota status unknown.
+- In Flow, confirm the correct account, inspect remaining Flow/AI credits and the current model's per-generation cost, then generate a pilot and the remaining scene clips only if the balance and eligibility allow it. Flow also has credits and rate limits; it is not an unlimited fallback.
+- If Flow has insufficient credits, is unavailable, or requires a paid upgrade, do not purchase or change plans without the user's approval. Pause or use non-generative visuals in Vids if suitable.
+- Download completed Flow clips and import them into the same Google Vids project. Keep Google Vids as the editor for narration, scene order, captions, music, SFX, transitions, QA, and final MP4 export.
+- Record the generator used per scene, quota/credit evidence, imports, and any visible watermark in the manifest. Respect all account restrictions and required provenance marks.
+
+## 7. Produce
 Generate narration, then visuals for narration-led scenes. Generate in small batches. Insert and order scenes; mute conflicting clip audio. Update manifest after each verified scene. Never retry before checking whether the previous job succeeded.
 
 ## 7. Edit
