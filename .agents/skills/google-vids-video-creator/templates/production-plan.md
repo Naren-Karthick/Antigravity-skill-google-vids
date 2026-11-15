@@ -17,6 +17,18 @@
 - Export filename/location:
 
 
+## Production engine and fallback
+- Google Vids quota status (available / exhausted / unavailable / unknown):
+- Evidence and reset details shown in UI:
+- Selected visual engine (Google Vids / Remotion / Motion Canvas / Manim / HTML-Canvas / Blender):
+- Fallback reason (if applicable):
+- Remotion license eligibility checked (yes/no/not applicable):
+- TTS engine/model/voice:
+- Voice model license checked:
+- FFmpeg version and render settings:
+- Confirmed no paid service or purchase used (yes/no):
+- Asset/music/SFX/font source and license log:
+
 ## YouTube publishing package
 - Topic recommendation and evidence:
 - Alternative topic ideas and scores:
@@ -63,5 +75,7 @@ One sentence describing what the viewer should understand, feel, or do.
 ## Checkpoints
 - Current phase:
 - Last verified checkpoint:
-- Google Vids project URL:
+- Google Vids project URL (if used):
+- Local source project folder (if used):
+- Final MP4 path and playback verification:
 - Outstanding blockers:
