@@ -47,6 +47,30 @@ Create a brief containing:
 
 For an unspecified full video, use sensible defaults and state them in the plan before production. Do not pause for approval unless the brief involves sensitive claims, personal likeness/voice cloning, paid actions, or another consequential choice.
 
+
+## Phase 0A — Topic discovery and YouTube packaging
+
+When the user asks for a topic, asks what to upload next, or gives a broad channel niche without a specific title, do not randomly invent a topic. Research current audience interest and recommend a topic with a clear viewer promise.
+
+1. Identify the channel niche, intended audience, language, geography, channel format, and recent topics if visible or supplied. Do not assume access to private YouTube Analytics; inspect it only when the user has connected/signed in and the relevant page is available.
+2. Research current search interest, recent news/events where relevant, YouTube autocomplete/search results, competing videos, and audience questions from credible public sources. Use current evidence and note the research date. Do not claim access to exact search volume or private trend metrics unless the interface explicitly shows them.
+3. Build a shortlist of 5–10 topic ideas. Score each consistently (for example 1–5) for audience demand signals, curiosity/hook strength, novelty, relevance to the channel, visual storytelling potential, competition/differentiation, and production feasibility.
+4. Recommend the strongest topic and explain the evidence and trade-offs briefly. Never promise that a topic, title, thumbnail, or upload time will go viral. Avoid misleading clickbait and unsupported trend claims.
+5. For the chosen topic, create 3–5 title options with distinct angles (curiosity, benefit/explainer, emotional/story, search-friendly). Select one recommended title. Keep it accurate to the video's actual content and within the platform's current title constraints.
+6. Build a thumbnail concept and generate a dedicated thumbnail image using an available image-generation tool. Default to 16:9 YouTube thumbnail framing (commonly 1280×720 output when supported). Use one dominant subject, strong readable contrast, a clear focal point, and very short text only when it adds value. Keep important elements inside safe margins; avoid tiny text, clutter, fake UI, misleading imagery, and unnecessary logos. Do not rely on text rendered inside image generation for exact spelling: generate clean composition and add/edit text in a design tool when needed. Inspect the final thumbnail at small/mobile size.
+7. Prepare a complete publishing package:
+   - Recommended title plus alternate titles
+   - Thumbnail image and a short explanation of its visual hook
+   - Search-friendly description with an opening hook, concise summary, useful keywords naturally integrated, source credits/references where needed, and CTA
+   - Relevant YouTube tags (not keyword stuffing) and a small set of relevant hashtags
+   - Chapters with timestamps only after the final edit/export duration is known
+   - Pinned comment idea and optional community-post teaser
+   - Category, audience/age suitability, language, and upload checklist when these can be determined
+8. Check spelling, factual accuracy, source attribution, copyright and platform policy. Do not copy another creator's title/thumbnail/script. Do not add unrelated trending tags. Do not claim sponsorship, affiliation, or official endorsement.
+9. Save the package in the project folder and include it in the final delivery. If the user only asked for ideas, stop before video production; otherwise continue automatically into the full production workflow.
+
+If the user supplies a specific title, respect it as the working title. You may suggest stronger alternatives, but do not silently replace the user's chosen title.
+
 ## Phase 1 — Title-to-video research and script
 
 **Title-only mode is a first-class workflow.** If the user gives only a video title (for example, "What If Humans Never Slept?" or "How Does an Array Work in C?"), treat that as sufficient authorization to begin the complete production pipeline. Do not ask the user to write a script, provide research, or fill in a long brief. Infer a sensible audience, format, tone, runtime, and visual approach from the title and the user's stated preferences; state those defaults in the production plan and proceed.
@@ -155,6 +179,35 @@ UI labels and feature availability can change. Follow the current visible UI; us
 - Record which scenes were generated in Vids versus Flow, the selected model/settings, any displayed credit usage, import status, and any watermark or limitation in the manifest and final report.
 
 **Important:** A Google Vids quota exhaustion is a trigger to use Flow for video-clip generation, not permission to bypass account restrictions. Respect Flow's own credits, rate limits, eligibility, regional availability, and safety controls.
+
+
+## Visual style and character library
+
+Choose the visual language that best serves the subject, audience, platform, and available generation tools. Do not force every video into one default look. Offer or infer a suitable style and record it in the visual bible.
+
+Supported styles include:
+- **2D animation:** flat/vector, hand-drawn, cut-out, motion-graphics, educational cartoon, comic-book, silhouette.
+- **3D animation:** stylized 3D, family-friendly/cartoon 3D, realistic 3D, game-cinematic, clay/stop-motion look.
+- **Stickman:** minimalist line characters, expressive poses, simple backgrounds and readable visual metaphors.
+- **Anime/manga-inspired:** expressive stylized characters and cinematic compositions; use original designs rather than copying a living artist's distinctive style or a protected franchise character.
+- **Realistic/cinematic:** live-action-like scenes, documentary reenactment, historical reconstruction, nature/science visualization.
+- **Hybrid:** combine styles only with a clear reason and consistent art direction.
+
+For each recurring character, create a character bible and (when supported) a clean reference sheet. Specify character ID, age range where relevant, silhouette, proportions, face, hair, skin/fur/material appearance, clothing, accessories, palette, expressions, movement, and immutable continuity traits. Reuse approved reference assets across scenes. Avoid accidental character drift, extra limbs, changing costumes, or inconsistent scale.
+
+### Deities, sacred figures, and culturally specific depictions
+
+When a video includes a god, goddess, deity, avatar, prophet, saint, sacred being, or figure from a living or historical religious tradition:
+
+1. Identify the exact tradition, denomination/school, region, period, and source tradition relevant to the user's topic. Do not assume that depictions are universal across communities.
+2. Research authoritative primary or community-respected sources, such as the relevant scripture/translation, temple or cultural institution material, museum collections, academic publications, and reputable tradition-specific sources. Cross-check visual attributes where possible.
+3. Verify iconography individually: names and forms, skin/hair description where textually or traditionally specified, number and placement of arms/faces, weapons or sacred objects, vehicle/mount, hand gestures (mudras), clothing, ornaments, tilak/marks, colors, companions, and symbolic objects. Include only attributes supported by the selected tradition/source; do not fill gaps with guesses.
+4. Distinguish scriptural description from regional artistic convention, later devotional art, and modern popular imagery. If sources differ, choose one clearly identified tradition/style and state that choice in the production notes.
+5. Never combine attributes from different deities, traditions, avatars, or regions just because they look visually dramatic. Do not treat a modern poster depiction as proof of canonical details.
+6. Depict sacred figures respectfully. Avoid parody, sexualization, degrading poses, careless combat/gore, or using sacred symbols as decoration. Consider that some communities discourage visual depiction; if the user's intent or tradition makes this sensitive, ask one concise clarification before generating.
+7. Create and approve a deity/figure reference sheet before generating multiple scenes. Keep the same face, iconography, clothing, ornaments, attributes, and proportions throughout the video. If the source material does not specify a detail, keep it neutral or omit it rather than inventing certainty.
+8. Add a short source note to the research brief and, where appropriate, the video description. Never claim that an AI-generated depiction is an authentic historical artifact or definitive representation.
+
 
 ## Phase 5 — Visual consistency and generation
 
