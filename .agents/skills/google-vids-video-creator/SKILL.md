@@ -3,7 +3,7 @@ name: google-vids-video-creator
 description: >-
   End-to-end, resumable video production from a topic or brief to a verified
   exported MP4. Researches, scripts, storyboards, generates visuals and audio,
-  edits in Google Vids, uses external tools only when needed, performs quality
+  edits in Google Vids or free local motion-graphics tools when quota is exhausted, performs quality
   checks, and reports verified completion. Use for complete videos, explainers,
   animated stories, YouTube videos, Shorts, and social videos.
 ---
@@ -226,8 +226,10 @@ Do not upload private scripts, voice samples, or media to external services with
 
 ## Phase 7 — Timeline editing and polish
 
-1. Place scenes in the storyboard order and verify no missing or duplicate scenes.
-2. Fit each clip to the narration/action beat. Prefer trim, extend, or a small speed adjustment when it preserves quality; do not make motion unnaturally fast/slow.
+Use the editor selected in Phase 4A. In Google Vids, arrange the imported/generated clips and tracks in the UI. In the local fallback, edit the Remotion/Motion Canvas/Manim composition or the scene-render pipeline and use FFmpeg for final assembly.
+
+1. Place scenes in storyboard order and verify no missing or duplicate scenes.
+2. Fit each scene to the measured narration/action beat. Prefer editing scene durations or animation timing; do not make speech or motion unnaturally fast/slow.
 3. Ensure voiceover does not get cut at scene boundaries. Use intentional overlaps only when supported and appropriate.
 4. Add transitions sparingly; avoid transitions that slow the story or introduce gaps.
 5. Add captions/subtitles when requested or clearly useful. Review transcription against the actual narration; correct names, numbers, punctuation, and line breaks.
@@ -236,32 +238,28 @@ Do not upload private scripts, voice samples, or media to external services with
 8. Use consistent typography, color, framing, and pacing.
 9. Preview the complete video from beginning to end, not only individual scenes.
 
-## Phase 8 — External-tool decision policy
+## Phase 8 — Tool and cost policy
 
-Google Vids remains the primary editor. Use external tools only when all of these are true:
-- A concrete capability gap or quality issue has been identified.
-- The external tool is available and authorized.
-- The benefit outweighs extra upload, cost, privacy, and workflow complexity.
-- The resulting asset can be brought back into Google Vids or used for a clearly stated post-export task.
+Google Vids is the preferred editor while its available features meet the brief. If its AI video-generation quota is exhausted, the local pipeline in `references/free-local-production-fallback.md` becomes the production path—not an optional paid add-on.
 
-Examples:
-- FFmpeg: inspect media metadata/duration, normalize or trim audio, create proxies, validate playback, or perform a requested post-export conversion. Never use it to bypass a Google Vids restriction.
-- External TTS: voice quality/language control when native narration is inadequate.
-- External image/video generation: a specific visual the native generator cannot achieve.
-- Descript or another editor: only when the requested editing operation is unavailable in Google Vids and the user has authorized the external workflow.
-
-Do not assume a tool is installed. Check availability before invoking it. Do not send account credentials, private assets, or copyrighted source media to a third party without permission.
+- Use Remotion first only when the current free-license eligibility permits it; otherwise use Motion Canvas, Manim, HTML/CSS/SVG/Canvas, or Blender as appropriate.
+- Use free local TTS and FFmpeg for narration, mixing, captions, muxing, and final validation.
+- Do not switch to Google Flow, paid APIs, paid stock, paid TTS, subscriptions, or purchases automatically. Ask before any paid action.
+- Do not assume a tool is installed. Inspect the environment and use official installation instructions. Ask before installations or large model downloads when user authorization is required.
+- Check software, voice-model, font, music, SFX, and stock-media licenses independently. Keep a source/license log.
+- Do not send credentials, private assets, or copyrighted source media to third parties without permission.
 
 ## Phase 9 — Quality assurance
 
 Use the checklist in `templates/quality-checklist.md`. At minimum verify:
-- Correct runtime, aspect ratio, orientation, and resolution
+- Correct runtime, aspect ratio, orientation, resolution, and frame rate
 - All scenes present, in order, and visually coherent
 - No black/blank frames, placeholders, accidental duplicate clips, or abrupt gaps
 - Narration complete, intelligible, correctly pronounced, and synchronized
 - Music/SFX balanced and not clipping
 - Captions accurate, readable, and safe-positioned
 - Titles, spelling, names, and factual statements checked
+- Software, voice, font, music, SFX, and visual asset license/source notes recorded
 - Start and ending feel intentional
 - Export file exists, is non-zero, and can be opened/played
 - Playback spot-check includes opening, middle, scene transitions, and ending; full playback when practical
@@ -270,13 +268,13 @@ If a check cannot be performed, mark it **not verified** rather than passing it.
 
 ## Phase 10 — Export and delivery
 
-1. Export using a format and quality actually offered by the current UI. Prefer MP4 for standard video delivery.
-2. Wait for rendering and download completion; do not infer completion from a closed dialog.
+1. Export MP4 from Google Vids when that is the selected editor and export is available. For the local fallback, render/assemble the final MP4 with the selected renderer and FFmpeg.
+2. Wait for rendering and file-write completion; do not infer completion from a closed dialog or a started process.
 3. Confirm the exact output file path exists and has non-zero size.
-4. Inspect metadata with an available media tool (FFprobe/FFmpeg if installed); verify duration and dimensions against target.
+4. Inspect metadata with ffprobe/FFmpeg or another available media tool; verify duration, dimensions, frame rate, and audio/video streams against target.
 5. Play the file or perform a supported playback check. If unavailable, disclose that limitation.
-6. Preserve the editable Google Vids project and source assets when possible.
-7. Deliver the exact file path/link only when verified. Include the Google Vids project link if available.
+6. Preserve the editable Google Vids project or local source project, scene code, assets, narration, captions, render logs, and QA report when possible.
+7. Deliver the exact file path/link only when verified. Include the Google Vids project link if available, or the local project/source folder location.
 
 ## Final report
 
