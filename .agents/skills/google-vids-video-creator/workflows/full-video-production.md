@@ -41,19 +41,22 @@ For every scene define: ID, purpose, narration, measured/estimated duration, vis
 Create a manifest and asset folders. Open Google Vids, create/name project, set aspect ratio. Establish visual style and reference assets. Generate one pilot scene and verify style, timing, audio, and insertion before batch work.
 
 
-## 6. Check Vids quota and choose the generator
-Before any AI video-clip generation, inspect the live Google Vids UI/account for a remaining-use counter, quota warning, disabled generation control, or limit error. Record the observed status and any displayed reset details in the manifest. Do not hard-code a monthly/daily allowance or estimate remaining quota from this project's clip count.
+## 6. Check Vids quota and select the production path
 
-- If Vids quota is available, create and verify one pilot clip, then continue in small batches.
-- If Vids explicitly reports the quota is exhausted or generation is blocked by the limit, stop retrying Vids and switch clip generation to Google Flow.
-- If the counter is not exposed, try one pilot only if the UI permits it. A quota error triggers the Flow fallback; otherwise mark quota status unknown.
-- In Flow, confirm the correct account, inspect remaining Flow/AI credits and the current model's per-generation cost, then generate a pilot and the remaining scene clips only if the balance and eligibility allow it. Flow also has credits and rate limits; it is not an unlimited fallback.
-- If Flow has insufficient credits, is unavailable, or requires a paid upgrade, do not purchase or change plans without the user's approval. Pause or use non-generative visuals in Vids if suitable.
-- Download completed Flow clips and import them into the same Google Vids project. Keep Google Vids as the editor for narration, scene order, captions, music, SFX, transitions, QA, and final MP4 export.
-- Record the generator used per scene, quota/credit evidence, imports, and any visible watermark in the manifest. Respect all account restrictions and required provenance marks.
+Inspect the live Google Vids UI/account for a quota counter, remaining-use indicator, disabled generation control, or limit error. Record only observed evidence; do not hard-code allowances or estimate quota from this project's clip count.
+
+- If Vids generation is available, make one pilot clip and continue in small batches after verifying it.
+- If Vids reports quota exhaustion or the feature is unavailable, stop retrying and switch to the free local production fallback in `references/free-local-production-fallback.md`.
+- Use Remotion first for general motion graphics, subject to current license eligibility. If unavailable or ineligible, use Motion Canvas, Manim, HTML/CSS/SVG/Canvas, or Blender according to the content.
+- Generate narration with a suitable free local TTS engine (Kokoro first where supported; Piper only after checking the exact voice's model card/license; then an available offline OS voice).
+- Render scenes locally and use FFmpeg for concatenation, narration/music/SFX mixing, captions, MP4 muxing, and validation.
+- Do not switch to Google Flow, paid APIs, paid stock, paid TTS, or purchases as an automatic fallback. Ask before any paid action.
+- If the machine lacks the required tools or cannot render the requested quality, report the blocker and offer a simpler local motion-graphics version or ask the user to provide assets/voiceover.
+
+Google Vids may still be used for optional finishing if its remaining free features are sufficient; otherwise complete the final MP4 locally. Log the fallback reason, renderer, TTS engine/voice/license, asset licenses, FFmpeg version, and verification results.
 
 ## 7. Produce
-Generate narration, then visuals for narration-led scenes. Generate in small batches. Insert and order scenes; mute conflicting clip audio. Update manifest after each verified scene. Never retry before checking whether the previous job succeeded.
+Generate narration first for narration-led videos, then create visuals using the selected engine. With the local fallback, render and verify each scene, then assemble and mix with FFmpeg. Update the manifest after each verified scene. Never retry before checking whether the previous job succeeded.
 
 ## 8. Edit
 Trim/extend clips, align narration, add subtle transitions, captions, music and SFX. Check text safe areas and mobile legibility. Preview the full sequence.
