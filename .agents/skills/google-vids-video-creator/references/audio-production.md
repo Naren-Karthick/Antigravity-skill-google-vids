@@ -17,8 +17,10 @@
 - Check for clipping, abrupt starts/stops, and unintended silence.
 - Mute native video-clip audio when it conflicts with dedicated narration/music; retain it when it is intentionally part of the scene.
 
-## External audio tools
-Use external TTS or audio processing only when native Google Vids controls cannot meet a specific need and the tool is available and authorized. Check tool availability first. Consider privacy, licensing, cost, and whether the result can be imported into the Vids project.
+## Free local TTS and audio tools
+When Google Vids AI video quota is exhausted and the local fallback is active, generate narration with a free offline engine rather than a paid cloud API. Prefer Kokoro locally when the required language/voice is supported; otherwise consider Piper only after checking the exact voice's MODEL_CARD and training-data license, then a suitable built-in offline OS speech engine. Generate a short test, confirm pronunciation and voice quality, and measure every narration file. Do not assume all voices or language packs are free for every use.
+
+Use FFmpeg for automated audio conversion, fades, mixing, loudness checks, synchronization, and final muxing. Audacity is an optional free manual editor for waveform cleanup and listening checks. Keep narration dominant, duck music under speech, avoid clipping, and retain asset/license notes. Never silently call a paid cloud TTS API or use an unlicensed music/SFX track.
 
 ## Synchronization
 - Scene duration must cover narration plus a natural visual tail.
