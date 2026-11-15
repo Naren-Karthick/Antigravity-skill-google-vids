@@ -3,7 +3,7 @@
 Use this workflow for a complete video from topic to exported MP4.
 
 ## 1. Brief
-Read the request and attachments. Define audience, language, platform, runtime, aspect ratio, tone, narration, visual style, and export target. Default only when safe; ask one concise question for a consequential ambiguity.
+Read the request and attachments. First confirm whether the deliverable is a long-form YouTube video or a YouTube Short. If the user has not specified, ask exactly one direct question — "Do you want a long-form YouTube video or a YouTube Short?" — and wait for the answer before research/script production. If already specified, do not ask again. Then define audience, language, platform, runtime, aspect ratio, tone, narration, visual style, and export target.
 
 
 ## 1A. Discover a topic and prepare YouTube packaging (when requested or no title is supplied)
@@ -12,7 +12,7 @@ Research current audience-interest signals and the channel niche before recommen
 For the chosen topic, create 3–5 accurate title options and recommend one. Generate a dedicated 16:9 thumbnail image with a single clear focal subject, high contrast, short readable text if useful, and safe margins. Use image generation for the image itself; add exact typography in a design tool if needed. Inspect it at mobile size. Prepare a description, relevant tags, a few hashtags, CTA, pinned comment, optional community teaser, and upload checklist. Add chapters only after final runtime/timestamps are known. Save everything using the YouTube publishing package template. If the user asked only for topic ideas, stop here; otherwise continue production.
 
 ## 2. Title-led research (required when only a title is supplied)
-Treat the title as enough to start. Do not ask the user to supply a script or research notes. Infer sensible defaults for audience, language, platform, runtime, narration, and visual style from the title and known preferences; record the assumptions in the production plan and proceed.
+Treat the title as enough to start. Do not ask the user to supply a script or research notes. Do not infer long-form versus Shorts from the title. If the format is not already known, ask the required format question in Step 1 and wait. Once answered, tailor runtime, aspect ratio, pacing, scene count, narration density, hook, and ending to that format. Record the choice in the production plan.
 
 - Break the title into the central question, concepts, audience, and promised outcome.
 - Research the topic before scripting. Prefer primary sources such as official documentation, original research, government/university publications, standards bodies, and direct datasets; use reputable secondary sources for context.
@@ -20,6 +20,11 @@ Treat the title as enough to start. Do not ask the user to supply a script or re
 - Save a research brief containing key findings, verified facts, examples, caveats, uncertainties, source titles/organizations, URLs, and research date.
 - Distinguish established facts from interpretation, prediction, and hypothetical storytelling. In "what if" videos, explain the real-world baseline and label imagined outcomes as speculation.
 - Verify names, dates, figures, units, definitions, quotations, and code examples. Omit or qualify unsupported claims; never fabricate evidence or citations.
+
+## 2A. Format-specific content design
+- Long-form YouTube: default landscape 16:9. Build a deeper narrative with a strong opening hook, clear sections, examples/context, natural transitions, and a satisfying conclusion. Set runtime based on topic depth and user direction; add chapters after final timestamps are verified.
+- YouTube Shorts: default vertical 9:16. Deliver one focused idea quickly, hook viewers in the opening seconds, use tighter sentences and faster visual changes, large mobile-safe captions, and a concise payoff/CTA. Remove lengthy introductions and unnecessary exposition. Fit the script to a concise short-form runtime supported by current platform rules and user preference.
+- Never create a long-form script and merely crop it into a Short. Write and storyboard specifically for the selected format. If the user requests both, create separate scripts, edits, titles, and thumbnails/packages for each.
 
 ## 3. Script
 Turn the research brief into a complete, runtime-appropriate script: hook, narrative arc, clear explanations, transitions, narration, scene-by-scene visual intent, concise on-screen text, music/SFX cues, conclusion, and CTA where appropriate. Include source notes for the description or references slide when useful. Keep sentences speakable and check factual claims and pronunciation. For educational/code topics, verify the code and explanations.
