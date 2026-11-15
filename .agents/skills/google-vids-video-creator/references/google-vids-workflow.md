@@ -23,6 +23,22 @@ Google Vids is the primary editor. Treat this document as an operational guide, 
 4. Import external assets only for a specific native capability gap.
 5. Keep a manifest mapping each asset to its scene.
 
+
+## Quota preflight and Google Flow fallback
+
+Before creating AI video clips, inspect the live Google Vids UI/account for a quota counter, remaining-use indicator, disabled generation control, plan eligibility notice, or quota error. Limits vary by account and can change, so do not rely on a fixed number from this reference. Record only what the account actually displays. Do not estimate remaining quota from the current project's clip count.
+
+If Vids quota is exhausted or the generator returns a limit error, switch clip generation to Google Flow rather than retrying Vids repeatedly:
+
+1. Open the official Google Flow experience in the same authenticated browser profile: https://labs.google/fx/tools/flow.
+2. Check the profile menu for remaining Flow/AI credits. Check the prompt/settings panel for the selected model's current credit cost. Both balances and costs are subject to change.
+3. Generate a pilot clip, then create the remaining clips in small batches only while credits, account eligibility, and rate limits permit.
+4. Download the completed Flow clips and import them into the existing Google Vids project. Finish editing and export in Google Vids.
+5. If Flow has insufficient credits or requires a paid plan/upgrade, stop and ask before any purchase. If Flow is unavailable, report the blocker and use suitable non-generative visuals in Vids only if they meet the brief.
+6. Check whether the exported Flow clips carry a visible watermark and report it. Do not remove required provenance marks.
+
+Google Flow is a fallback generator, not an unlimited quota bypass. Respect both products' account limits, regional availability, safety rules, and paid-action boundaries.
+
 ## Edit and preview
 - Arrange scenes in storyboard order.
 - Match scene durations to measured narration and visual beats.
