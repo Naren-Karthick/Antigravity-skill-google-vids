@@ -14,6 +14,22 @@
 - Music/SFX:
 - Export filename/location:
 
+
+## YouTube publishing package
+- Topic recommendation and evidence:
+- Alternative topic ideas and scores:
+- Recommended YouTube title:
+- Alternative titles:
+- Thumbnail concept:
+- Thumbnail asset path:
+- Description:
+- Tags:
+- Hashtags:
+- Chapters (add after final edit):
+- Pinned comment:
+- Community post teaser:
+- Upload checklist:
+
 ## Story promise
 One sentence describing what the viewer should understand, feel, or do.
 
