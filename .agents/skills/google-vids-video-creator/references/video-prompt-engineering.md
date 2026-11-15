@@ -13,6 +13,21 @@ Write each shot prompt in this order:
 8. **Continuity:** reference image/ingredient, costume, proportions, palette, environment.
 9. **Constraints:** no unwanted text, logos, watermarks, extra characters, or unintended dialogue when relevant.
 
+
+## Visual style selection
+Choose the visual style intentionally for each project rather than applying a fixed default:
+- 2D vector, hand-drawn, cut-out, cartoon, comic, silhouette, or motion-graphics.
+- 3D stylized, cartoon, realistic, game-cinematic, clay, or stop-motion look.
+- Minimalist stickman animation.
+- Anime/manga-inspired original characters.
+- Realistic/cinematic, documentary reenactment, historical reconstruction, or science visualization.
+- Hybrid styles only when they support a coherent art direction.
+
+Record aspect ratio, line/texture treatment, palette, lighting, camera language, character proportions, environment rules, and exclusions in the visual bible.
+
+## Sacred and mythological character accuracy
+For deities and sacred figures, identify the exact tradition, region, period, and source convention before prompting. Research authoritative scripture translations, tradition-specific institutions, museum collections, and academic sources. Verify each depicted attribute (forms, faces/arms, weapons, objects, mount, mudras, clothing, ornaments, marks, colors, companions) and distinguish textual descriptions from regional devotional art. Do not blend iconography or invent missing details. Depict respectfully; ask for clarification if the tradition or community's depiction expectations are materially ambiguous. Generate a consistent reference sheet and reuse it across shots. If a detail is uncertain, omit it or keep it neutral.
+
 ## Character consistency
 Create a character bible before generating multiple scenes:
 - Character name/ID
