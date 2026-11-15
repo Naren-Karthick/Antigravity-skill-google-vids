@@ -41,14 +41,14 @@ Before any AI video-clip generation, inspect the live Google Vids UI/account for
 ## 7. Produce
 Generate narration, then visuals for narration-led scenes. Generate in small batches. Insert and order scenes; mute conflicting clip audio. Update manifest after each verified scene. Never retry before checking whether the previous job succeeded.
 
-## 7. Edit
+## 8. Edit
 Trim/extend clips, align narration, add subtle transitions, captions, music and SFX. Check text safe areas and mobile legibility. Preview the full sequence.
 
-## 8. QA
+## 9. QA
 Run the checklist. Fix failures and re-check. Mark untestable items as not verified.
 
-## 9. Export
+## 10. Export
 Export MP4 if offered. Wait for completion. Verify exact file path, non-zero size, metadata, dimensions, duration, and playback. Preserve the editable project and source assets.
 
-## 10. Deliver
+## 11. Deliver
 Report verified specs, project link, export location, QA status, tools used, and remaining limitations. Never say "finished" if the file or playback is unverified.
