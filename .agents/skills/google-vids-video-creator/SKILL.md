@@ -131,6 +131,31 @@ Before resuming, read the manifest and inspect the actual Google Vids project. R
 
 UI labels and feature availability can change. Follow the current visible UI; use the reference guide as a hint, not an authority over the live interface.
 
+
+## Phase 4A — Check Google Vids generation quota and choose the video-generation engine
+
+**Before generating any AI video clips, inspect the user's live Google Vids account and current UI for quota/limit status.** Do not assume a fixed monthly or daily allowance: limits, counters, eligible features, and reset rules vary by account type, subscription, Workspace policy, and product rollout.
+
+1. Open the AI video generation panel and inspect any remaining-use counter, quota message, disabled control, plan notice, or usage-limit dialog. If the account exposes a usage/availability page, inspect it too.
+2. Record what is actually visible in the production manifest: quota status (available, exhausted, unavailable, or unknown), any displayed remaining amount, reset date/time if shown, and the evidence observed.
+3. Do not infer remaining quota from the number of clips created in this project. Usage may be shared across projects or other Google products, and the account may not expose a precise counter.
+4. If Google Vids has usable quota, generate one pilot clip and verify it succeeds before continuing in small batches.
+5. If Google Vids explicitly reports that its AI video-generation limit is exhausted, generation is blocked by quota, or the feature is unavailable for this account, switch the video-clip generation work to Google Flow. Do not repeatedly retry the exhausted Vids generator.
+6. If the Vids quota cannot be determined from the UI, try one low-cost pilot only when the UI allows it. If the attempt returns a limit/quota error, switch to Flow. If there is no reliable way to check and no error is shown, mark the status unknown and proceed cautiously rather than claiming the quota is available.
+
+### Google Flow fallback
+
+- Open Google Flow in the same authenticated browser profile at https://labs.google/fx/tools/flow (or use the official Flow entry point shown in Google products). Confirm the correct Google account.
+- Before generating, inspect the Flow profile area for remaining Flow/AI credits and inspect the current model/settings panel for the cost of the selected generation. Flow credits and model costs can change; never hard-code a credit allowance or assume Flow is unlimited.
+- If Flow has enough available credits and the generation is permitted, generate the required scene clips there. Prefer the model/settings that best meet the storyboard and remaining-credit budget; create a pilot first, then proceed in small batches.
+- If Flow also has insufficient credits, is rate-limited, unavailable in the user's region/account, or requires a paid upgrade/purchase, stop before spending money. Ask the user before any purchase, subscription change, or other paid action. Otherwise use non-generative Vids assets (images, diagrams, stock media, motion graphics) where they can meet the brief, or report the blocker.
+- Verify each Flow generation completed and download/export the resulting clip. Keep scene IDs and filenames aligned with the storyboard and manifest.
+- Import the downloaded Flow clips into the original Google Vids project. Google Vids remains the primary editor: arrange clips, add narration, captions, music, SFX, transitions, and titles there, then perform the normal QA and MP4 export.
+- Check the output for any visible watermark, especially when the account or location may apply one. Do not attempt to remove or conceal required provenance marks; report them if present.
+- Record which scenes were generated in Vids versus Flow, the selected model/settings, any displayed credit usage, import status, and any watermark or limitation in the manifest and final report.
+
+**Important:** A Google Vids quota exhaustion is a trigger to use Flow for video-clip generation, not permission to bypass account restrictions. Respect Flow's own credits, rate limits, eligibility, regional availability, and safety controls.
+
 ## Phase 5 — Visual consistency and generation
 
 1. Establish a visual bible: style, palette, character design, environment, camera language, lighting, and exclusions.
