@@ -31,21 +31,22 @@ Turn a topic, title, brief, or supplied script into a complete, polished, export
 
 ## Phase 0 — Intake and production brief
 
-Read the user's request and supplied files. Do not ask for details that can be safely defaulted. Ask only when a missing choice materially changes the deliverable (for example, language, audience, or a required identity/brand asset).
+Read the user's request and supplied files. Before scripting or production, always establish the video format: long-form YouTube video or YouTube Short. If the user has not explicitly specified one, ask this one direct question and wait: "Do you want a long-form YouTube video or a YouTube Short?" Do not silently assume a format from the title. If the user has already specified the format or a clear duration/platform format, do not ask again.
 
 Create a brief containing:
 
 - Working title and one-sentence promise
 - Audience, language, tone, and content format
-- Platform and aspect ratio: default 16:9 for standard YouTube/explainers; 9:16 for Shorts/Reels/TikTok; use explicit user preference
-- Target runtime and resolution; never promise a resolution unavailable in the account
+- Video format (required): long-form YouTube video or YouTube Short
+- Platform and aspect ratio: long-form YouTube defaults to 16:9; Shorts defaults to vertical 9:16. Follow explicit user requirements and current platform specifications.
+- Target runtime and resolution; choose a format-appropriate runtime and never promise a resolution unavailable in the account
 - Narration: yes/no, voice/language/accent if known
 - Visual style, recurring characters, reference assets, and continuity rules
 - Music/SFX/caption requirements
 - Export destination and filename
 - Acceptance criteria and any user approval gates
 
-For an unspecified full video, use sensible defaults and state them in the plan before production. Do not pause for approval unless the brief involves sensitive claims, personal likeness/voice cloning, paid actions, or another consequential choice.
+For an unspecified video format, ask the mandatory long-form-versus-Shorts question before continuing. Once answered, use sensible defaults for the remaining non-consequential details and state them in the plan. Do not ask the format question again in the same project.
 
 
 ## Phase 0A — Topic discovery and YouTube packaging
@@ -73,7 +74,7 @@ If the user supplies a specific title, respect it as the working title. You may 
 
 ## Phase 1 — Title-to-video research and script
 
-**Title-only mode is a first-class workflow.** If the user gives only a video title (for example, "What If Humans Never Slept?" or "How Does an Array Work in C?"), treat that as sufficient authorization to begin the complete production pipeline. Do not ask the user to write a script, provide research, or fill in a long brief. Infer a sensible audience, format, tone, runtime, and visual approach from the title and the user's stated preferences; state those defaults in the production plan and proceed.
+**Title-only mode is a first-class workflow.** If the user gives only a video title (for example, "What If Humans Never Slept?" or "How Does an Array Work in C?"), treat that as sufficient authorization to begin the complete production pipeline. Do not ask the user to write a script, provide research, or fill in a long brief. Do not infer long-form versus Shorts from the title. If the format is not already specified, ask the mandatory format question in Phase 0 and wait. After the user chooses, infer sensible audience, tone, runtime, and visual approach from the title and known preferences; record defaults and proceed.
 
 ### Research workflow
 1. Parse the title into the central question, key concepts, likely audience, and the promise the video must fulfil.
