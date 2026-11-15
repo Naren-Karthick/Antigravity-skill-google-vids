@@ -5,6 +5,12 @@ Use this workflow for a complete video from topic to exported MP4.
 ## 1. Brief
 Read the request and attachments. Define audience, language, platform, runtime, aspect ratio, tone, narration, visual style, and export target. Default only when safe; ask one concise question for a consequential ambiguity.
 
+
+## 1A. Discover a topic and prepare YouTube packaging (when requested or no title is supplied)
+Research current audience-interest signals and the channel niche before recommending topics. Build a 5–10 idea shortlist, score demand signals, curiosity, novelty, channel fit, visual potential, competition/differentiation, and feasibility, then recommend one with evidence and caveats. Do not promise virality or invent analytics/search-volume data.
+
+For the chosen topic, create 3–5 accurate title options and recommend one. Generate a dedicated 16:9 thumbnail image with a single clear focal subject, high contrast, short readable text if useful, and safe margins. Use image generation for the image itself; add exact typography in a design tool if needed. Inspect it at mobile size. Prepare a description, relevant tags, a few hashtags, CTA, pinned comment, optional community teaser, and upload checklist. Add chapters only after final runtime/timestamps are known. Save everything using the YouTube publishing package template. If the user asked only for topic ideas, stop here; otherwise continue production.
+
 ## 2. Title-led research (required when only a title is supplied)
 Treat the title as enough to start. Do not ask the user to supply a script or research notes. Infer sensible defaults for audience, language, platform, runtime, narration, and visual style from the title and known preferences; record the assumptions in the production plan and proceed.
 
@@ -19,6 +25,9 @@ Treat the title as enough to start. Do not ask the user to supply a script or re
 Turn the research brief into a complete, runtime-appropriate script: hook, narrative arc, clear explanations, transitions, narration, scene-by-scene visual intent, concise on-screen text, music/SFX cues, conclusion, and CTA where appropriate. Include source notes for the description or references slide when useful. Keep sentences speakable and check factual claims and pronunciation. For educational/code topics, verify the code and explanations.
 
 **Continue automatically:** unless the user explicitly requests only research, an outline, or a script, continue from the title through storyboard, asset creation, Google Vids editing, quality checks, and export. Do not stop after presenting the research or script.
+
+## 3A. Select visual style and design characters
+Choose a fitting style per video: 2D vector/hand-drawn/cut-out, 3D stylized/realistic, stickman, anime-inspired original designs, cinematic/realistic, or a deliberate hybrid. Create a character bible and reusable reference sheet for recurring characters. For gods and sacred figures, research the exact tradition, region, period, scripture/iconographic sources, and attributes; distinguish textual descriptions from regional devotional art; do not mix iconography or invent unsupported details. Depict respectfully, and ask one concise question if a meaningful tradition choice or depiction sensitivity is unresolved.
 
 ## 4. Storyboard
 For every scene define: ID, purpose, narration, measured/estimated duration, visual prompt, character references, on-screen text, SFX/music cue, transition, and continuity notes. Use measured narration audio to set scene length.
