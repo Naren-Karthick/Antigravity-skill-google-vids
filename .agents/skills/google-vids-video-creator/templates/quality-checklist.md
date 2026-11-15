@@ -27,6 +27,13 @@
 - [ ] Spelling, punctuation, names, and numbers are correct.
 - [ ] Text is readable and does not cover faces/key content.
 
+## Local fallback and licensing
+- [ ] Selected renderer works locally and its current license permits this use.
+- [ ] TTS engine and exact voice/model license checked.
+- [ ] Music, SFX, fonts, stock media, and visual assets have recorded sources/licenses.
+- [ ] No paid service, purchase, or cloud-credit fallback was used without approval.
+- [ ] FFmpeg/ffprobe output metadata and render logs checked when local assembly is used.
+
 ## Export
 - [ ] Export completed and file exists at exact path.
 - [ ] File size is non-zero.
