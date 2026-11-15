@@ -11,8 +11,11 @@ Pause and ask the user to complete authentication or grant the required permissi
 ### Feature missing from the UI
 Check the current account, project type, aspect ratio, and visible menus. Feature availability may depend on account, rollout, region, or Workspace policy. Do not invent a workaround that bypasses policy.
 
-### Generation stalled or failed
-Check whether a result was created despite the error. If not, simplify the prompt, reduce conflicting constraints, and retry within the bounded retry policy. Stop if a quota or policy limit is reached.
+### Google Vids quota exhausted
+Stop retrying the Vids generator. Switch to the free local pipeline in `free-local-production-fallback.md`: Remotion first when eligible, then Motion Canvas, Manim, HTML/CSS/SVG/Canvas, or Blender; local TTS; and FFmpeg assembly. Do not use Google Flow or paid services automatically.
+
+### Local renderer or TTS failed
+Check the exit code, logs, dependency versions, available disk/RAM, and whether a partial output already exists. Reuse completed scenes. Try one simpler supported renderer or offline voice if available. Do not download large models or install software without required authorization. If no free option meets the quality bar, explain the blocker and ask whether the user can provide assets/voiceover or accept a simpler treatment.
 
 ### Inconsistent characters or visual style
 Re-check the approved reference image and character bible. Reuse the same references and reduce unnecessary changes in costume, camera, palette, and environment. Replace only affected scenes.
