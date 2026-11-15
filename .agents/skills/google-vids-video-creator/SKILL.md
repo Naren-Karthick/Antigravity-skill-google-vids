@@ -47,19 +47,33 @@ Create a brief containing:
 
 For an unspecified full video, use sensible defaults and state them in the plan before production. Do not pause for approval unless the brief involves sensitive claims, personal likeness/voice cloning, paid actions, or another consequential choice.
 
-## Phase 1 — Research and script
+## Phase 1 — Title-to-video research and script
 
-When the user provides only a topic/title, research before writing. Prefer primary sources for factual, scientific, medical, legal, financial, or current claims. Cross-check important claims; distinguish established facts from speculation and hypothetical storytelling. Record source URLs and research date in the production notes.
+**Title-only mode is a first-class workflow.** If the user gives only a video title (for example, "What If Humans Never Slept?" or "How Does an Array Work in C?"), treat that as sufficient authorization to begin the complete production pipeline. Do not ask the user to write a script, provide research, or fill in a long brief. Infer a sensible audience, format, tone, runtime, and visual approach from the title and the user's stated preferences; state those defaults in the production plan and proceed.
 
-Write:
-- Hook and narrative arc
+### Research workflow
+1. Parse the title into the central question, key concepts, likely audience, and the promise the video must fulfil.
+2. Search the web for trustworthy, relevant information before scripting. Use primary sources first: official documentation, research papers, government or university publications, standards bodies, and direct datasets. Use reputable secondary sources to add context and explain concepts.
+3. For factual topics, verify important claims against at least two independent credible sources where practical; prioritize original/primary evidence when sources disagree. For current topics, check publication dates and whether the information is still current.
+4. Build a compact research brief with: key findings, verified facts, useful examples, important caveats, disputed/uncertain points, source title/organization, URL, and research date. Keep source notes in the project folder and retain them for the final description or references slide when appropriate.
+5. Separate fact, interpretation, prediction, and fiction. Never turn an estimate, correlation, hypothesis, or hypothetical scenario into a confirmed fact. For "what if" videos, establish the real-world baseline, then clearly frame imagined consequences as speculation.
+6. Check all names, dates, numbers, units, definitions, code examples, and quotations. Do not invent citations, statistics, quotations, expert opinions, or scientific certainty. Quote sparingly and paraphrase in original language.
+7. If reliable sources cannot confirm a claim, omit it, qualify it, or explicitly mark it as uncertain rather than guessing.
+
+### Script package
+Use the research brief to create:
+- A compelling opening hook that quickly pays off the title's promise
+- A logical narrative arc with clear explanations and smooth transitions
 - Complete spoken narration, with pronunciation notes where needed
 - Scene-by-scene script and visual intent
-- On-screen text (short, legible, correctly spelled)
+- Short, legible, correctly spelled on-screen text
 - Music mood and timed SFX cues
-- Closing takeaway/CTA where appropriate
+- A meaningful conclusion and CTA where appropriate
+- A source list for production notes and, where useful, the video description or end references
 
-Do not fabricate citations, statistics, quotations, or scientific certainty. For "what if" content, label speculative consequences clearly and avoid presenting imagined events as established fact.
+Adapt the script to the target runtime. Prefer clear, natural, speakable language over dense paragraphs. For educational/code videos, verify that explanations and code are correct and runnable where applicable.
+
+Do not stop after delivering research or a script: continue into storyboard, asset generation, Google Vids editing, QA, and export unless the user explicitly asks for planning or a script only.
 
 ## Phase 2 — Storyboard and timing
 
