@@ -18,8 +18,9 @@
 - First inspect whether the operation completed despite a timeout or lost response.
 - If complete, update manifest; do not repeat.
 - If incomplete, identify the failure class: authentication, network, quota, generation, upload, timeline, export, or local file.
-- Retry at most twice for a transient asset-generation failure. Change one prompt parameter at a time to isolate the cause.
-- For quota/account/policy blockers, stop and ask the user; do not loop.
+- Retry at most twice for a transient asset-generation failure. Change one prompt parameter at a time to isolate the cause. For local rendering, inspect logs and output files before retrying; reuse completed scene renders.
+- For Google Vids quota exhaustion, stop retrying Vids and switch to the free local fallback in `references/free-local-production-fallback.md`. Do not use Google Flow or paid generators automatically.
+- For local-tool installation, license, hardware, or policy blockers, stop and explain the minimum user action; do not loop or incur costs.
 - For a failed export, verify project integrity before exporting again.
 - Never delete partial assets until the user authorizes cleanup.
 
