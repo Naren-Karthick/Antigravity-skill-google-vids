@@ -1,6 +1,8 @@
 # Production Plan
 
 ## Project brief
+- Video format: (required — long-form YouTube / YouTube Short)
+- Format confirmed by user: (yes/no)
 - Title:
 - Audience:
 - Language:
